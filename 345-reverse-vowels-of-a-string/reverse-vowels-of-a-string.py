@@ -1,20 +1,20 @@
 class Solution:
     def reverseVowels(self, s: str) -> str:
+        # two pointer sol
         vowels = "aeiouAEIOU"
-        s=list(s)
+        st=list(s)
 
-        l=0
-        r=len(s)-1
+        lpt=0
+        rpt=len(st)-1
 
-        while l < r : 
-            if s[l] not  in vowels :
-                l += 1 
-            elif s[r] not in vowels :
-                r -= 1
+        while lpt < rpt : 
+            if s[lpt] not  in vowels :
+                lpt += 1 
+            elif s[rpt] not in vowels :
+                rpt -= 1
             else :
-                s[l],s[r] = s[r],s[l]
-                l += 1
-                r -= 1
+                st[lpt],st[rpt] = st[rpt],st[lpt]
+                lpt += 1
+                rpt -= 1
 
-        return "".join(s)
-
+        return "".join(st)
