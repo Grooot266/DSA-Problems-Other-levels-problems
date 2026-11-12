@@ -1,19 +1,17 @@
 class Solution:
     def isPalindrome(self, x: int) -> bool:
-        # return str(x) == str(x)[::-1]
-        s=str(x)
-        l=0
-        r=len(s)-1
+        # Two pointer Sol\
+        s = str(x)
+        lp = 0 
+        rp = len(s)-1
 
-        while l < r : 
-            if s[l] != s[r]:
+        while lp < rp :
+            if s[lp] != s[rp]:
                 return False
-            l+=1
-            r-=1
+    
+            lp += 1
+            rp -= 1
         return True
-        
-    
-    
-   
-    
+
+
 
