@@ -1,6 +1,6 @@
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
-        # Sliding Window Sol
+        # Hash map method
         dt={}
         sz = len(nums)
         
