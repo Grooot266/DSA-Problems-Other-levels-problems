@@ -10,7 +10,7 @@ class Solution:
                 return [dt[rem],i]
             dt[nums[i]]=i
 
-    
+        # #Brute force
         # for i in range(n-1):
         #     for j in range(i+1,n):
         #         if nums[i] + nums[j] == target :
