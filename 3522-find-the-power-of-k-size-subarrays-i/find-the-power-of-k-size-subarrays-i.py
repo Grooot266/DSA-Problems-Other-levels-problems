@@ -1,6 +1,6 @@
 class Solution:
     def resultsArray(self, nums: List[int], k: int) -> List[int]:
-        # Sliding Window sol 
+        # Sliding Window method
         lt= 0
         res=[]
         cnt=1
