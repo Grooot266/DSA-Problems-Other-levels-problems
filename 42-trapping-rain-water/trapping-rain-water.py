@@ -1,30 +1,29 @@
-#Grooot266
 class Solution:
-    def trap(self, height: List[int]) -> int:
+    def trap(self, height: list[int]) -> int:
         # Two pointers optimal solution 
-        l=0
-        r=len(height)-1
+        lp=0
+        rp=len(height)-1
 
         leftmax = 0 
         rightmax = 0 
         totalwater = 0
 
-        while l < r:
-            leftmax = max(leftmax, height[l])
-            rightmax = max(rightmax,  height[r])
+        while lp < rp:
+            leftmax = max(leftmax, height[lp])
+            rightmax = max(rightmax,  height[rp])
 
             if leftmax < rightmax:
-                totalwater += leftmax - height[l]
-                l +=1 
+                totalwater += leftmax - height[lp]
+                lp +=1 
             else :
-                totalwater += rightmax - height[r]
-                r -=1
+                totalwater += rightmax - height[rp]
+                rp -=1
             
         return totalwater
        
        
        
-       
+    #    Brute force 
        
         # n = len(height)
 
@@ -50,5 +49,3 @@ class Solution:
         
 
         # return ans 
-
-
